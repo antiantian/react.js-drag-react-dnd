@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Row, Col,Input,Button,Radio,GetFieldDecorator,Checkbox,message,Select} from 'antd';
+import {Link,hashHistory  } from 'react-router';
 import update from 'react/lib/update';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
@@ -22,24 +23,6 @@ class SelectContainer extends Component {
       cards: [{
         id: 1,
         text: 'Write a cool JS library',
-      }, {
-        id: 2,
-        text: 'Make it generic enough',
-      }, {
-        id: 3,
-        text: 'Write README',
-      }, {
-        id: 4,
-        text: 'Create some examples',
-      }, {
-        id: 5,
-        text: 'Spam in Twitter and IRC to promote it (note that this element is taller than the others)',
-      }, {
-        id: 6,
-        text: '???',
-      }, {
-        id: 7,
-        text: 'PROFIT',
       }],
       slectlist:[],
     };
@@ -101,22 +84,6 @@ class SelectContainer extends Component {
             </Select>
             <p>{mess}</p>
         </div>
-        <hr/>
-        <DragSelect/>
-        <div style={{width:'200px'}}>         
-             <Select
-              mode="tags"
-              placeholder="Please select"
-              defaultValue={['a10', 'c12']}
-              value={this.state.slectlist}
-              onChange={this.handleChange}
-              style={{ width: '100%' }}
-            >
-              {children}
-            </Select>
-            <p>{mess}</p>
-        </div>
-        <hr/>
       </div>
     );
   }

@@ -95,13 +95,6 @@ class Card extends Component {
     ));
   }
 }
-// DragSource(ItemTypes.CARD, cardSource, (connect, monitor) => ({
-//     connectDragSource: connect.dragSource(),
-//     isDragging: monitor.isDragging(),
-//   }))(Card);
-// DropTarget(ItemTypes.CARD, cardTarget, connect => ({
-// connectDropTarget: connect.dropTarget(),
-// }))(Card);
 // export default DragSource(ItemTypes.CARD, cardSource, (connect, monitor) => ({
 //   connectDragSource: connect.dragSource(),
 //   isDragging: monitor.isDragging(),

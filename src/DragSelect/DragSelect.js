@@ -110,8 +110,8 @@ class DragSelect extends Component {
 			        ))}
 	            </div>
 	        </div>    
-            <div style={{...drop_style,left,top}} className={open?"drop_parent open":"drop_parent"}>
-	           <ul style={{...ul_style}}>
+            <div style={{...drop_style}} className={open?"drop_parent open":"drop_parent"}>
+	           <ul style={{...ul_style,left,top}}>
 	              {
 	              	this.state.data.map((item,index)=>{
 	              	  const hadClick=this.hadClick(item);
@@ -246,7 +246,6 @@ const drop_style={
     overflow: 'hidden',
     fontSize: '12px',
     width:'100%',
-    top:'30px'
 }
 const ul_style={
     outline: 'none',
@@ -255,6 +254,7 @@ const ul_style={
     listStyle: 'none',
     maxHeight: '250px',
     overflow: 'auto',
+    top:'30px'
 };
 export default DragSelect;
 
@@ -310,7 +310,7 @@ export default DragSelect;
                }
            }
         }
-      return false      
+         
 }
 function getClassName(dropElement){
   if(dropElement.getAttribute){

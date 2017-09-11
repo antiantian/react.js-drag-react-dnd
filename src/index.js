@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Wrap from './wrap';
-
-
-export default class SortableSimple extends Component {
-  render() {
-    return (
-        <Wrap/>
-    );
-  }
-}
-
-
-ReactDOM.render(<SortableSimple/>,document.getElementById('qc'));
+import { Router, Route, hashHistory, IndexRedirect ,IndexRoute} from 'react-router';
+import './style.css';
+import routes from './router';
+ReactDOM.render((
+          <Router history={hashHistory} routes={routes}/>
+  ),document.getElementById('qc'));
